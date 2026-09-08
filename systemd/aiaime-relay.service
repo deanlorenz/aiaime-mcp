@@ -1,0 +1,13 @@
+[Unit]
+Description=aiaime relay — marker writer for PostToolBatch hook
+After=nats-server.service
+Requires=nats-server.service
+
+[Service]
+ExecStart=%h/.local/bin/aiaime-relay
+Restart=on-failure
+RestartSec=5
+Environment=AIAIME_NATS_URL=nats://127.0.0.1:4222
+
+[Install]
+WantedBy=default.target
