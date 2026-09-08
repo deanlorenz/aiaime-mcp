@@ -1,0 +1,8 @@
+# Build outputs
+/bin/
+
+# Go build cache
+*.test
+
+# Local state directory — do not commit
+/.session/
