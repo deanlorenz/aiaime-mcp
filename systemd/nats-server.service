@@ -1,0 +1,11 @@
+[Unit]
+Description=NATS Server (aiaime transport)
+After=network.target
+
+[Service]
+ExecStart=%h/.local/bin/nats-server -js -sd %h/.aiaime/nats -p 4222
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
